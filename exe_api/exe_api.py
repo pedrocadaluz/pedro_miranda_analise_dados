@@ -28,7 +28,7 @@ dados = requests.get(api).json()
 df = pd.DataFrame(dados)
 filtro = df["nome"] == "BYD"
 
-api = f"https://brasilapi.com.br/api/fipe/veiculos/v1/{tipoVeiculo}/{codigoMarca}"
+#api = f"https://brasilapi.com.br/api/fipe/veiculos/v1/{tipoVeiculo}/{codigoMarca}"
 
 
 # Transforme em DataFrame e acha o codigo BYD através da coluna "nome"
