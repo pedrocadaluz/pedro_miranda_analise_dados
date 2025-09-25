@@ -42,3 +42,13 @@ df.info()
 filtro = df['NIVNOME'] == "Brasil"
 df_brasil = df.loc[filtro]
 df_brasil = [["VALDATA", "VALVALOR"]].plot()
+
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+# Plot
+ax = df_brasil[["VALDATA", "VALVALOR"]].plot(x="VALDATA", y="VALVALOR", legend=False)
+# Formatação do eixo X
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y'))  # ou '%Y-%m-%d' conforme sua preferência
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
